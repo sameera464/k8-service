@@ -1,0 +1,35 @@
+# Versions
+version: demo
+
+# Job Type Selector
+cronJob:
+  enabled: false
+staticJob:
+  enabled: true
+
+# Your Jobs
+jobs:
+  # First job
+  - name: nginx
+    image:
+      repository: nginx
+      # tag: latest
+      imagePullPolicy: IfNotPresent
+      imagePullSecrets: []
+    resources:
+      limits:
+        memory: 64Mi
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    schedule: "* * * * *"
+    startingDeadlineSeconds: 300
+    failedJobsHistoryLimit: 1
+    successfulJobsHistoryLimit: 1
+    concurrencyPolicy: Forbid
+    suspend: false
+    restartPolicy: Never
+    backoffLimit: 0
+    args: []
+    envFrom: []
+    annotations: {}
