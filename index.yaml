@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  job:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-02T19:05:49.988211-04:00"
+    description: A Helm chart for Kubernetes
+    digest: ebdb1fb1b94fd2e402bf2d30363f74a28d07f42bd7e5d3ae28c7b3977b306ab8
+    name: job
+    type: application
+    urls:
+    - https://github.com/sameera464/k8-helmjob/job-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-11-02T19:05:49.987624-04:00"
